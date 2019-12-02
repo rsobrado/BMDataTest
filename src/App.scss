@@ -1,0 +1,137 @@
+
+@import './scss/variables';
+*:focus {
+  outline: none !important;
+}
+
+body{
+  font-size: 16px !important;
+  background: rgba($color: $color-default-blue, $alpha: 0.25) !important;
+}
+a{
+  color: rgba($color: $color-primary-blue, $alpha: 0.5);
+}
+
+.container{
+  min-width: 90% !important;
+}
+.xs-hidden{
+  display: none !important;
+  @media screen and (min-width: 575px) {
+      display: inherit !important;
+  }
+}
+
+.md-hidden{
+  display: inherit !important;
+  @media screen and (min-width: 575px) {
+    display: none !important;
+  }
+}
+
+h1{
+  color: rgba($color: $color-primary-blue, $alpha: 0.8);
+  text-align: center;
+  border-radius: $space-default;
+  margin-bottom: calc(#{$space-default} / 2);
+  background: rgba($color: $color-default-blue, $alpha: 0.25);
+  line-height: 1.8;
+  font-size: 32px;
+}
+h6{
+  color: rgba($color: $color-primary-blue, $alpha: 0.3);
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 0;
+  border-bottom: 1px dashed rgba($color: $color-primary-blue, $alpha: 0.1);
+}
+.react-sanfona-item {
+  line-height: 1;
+  h3{
+    color: $color-primary-blue;
+    padding-left: calc(#{$space-default} / 2);
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 2;
+    margin-top: 5px !important;
+    border-bottom: 1px solid rgba($color: $color-primary-blue, $alpha: 0.05);
+    box-shadow:  0 5px 4px -3px rgba($color: $color-primary-blue, $alpha: 0.05);
+  }
+  &-body-wrapper {
+    padding: 10px 0;
+    background: rgba($color: $color-primary-blue, $alpha: 0.6);
+    border-bottom-right-radius: calc(#{$space-default} / 2);
+    border-bottom-left-radius: calc(#{$space-default} / 2);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.14);
+    margin: 0 10px 10px;
+    padding-left: calc(#{$space-default} / 2);
+    
+    @media screen and (min-width: 575px) {
+      margin: 0 0 10px;
+      border-bottom-right-radius: calc(#{$space-default} / 4);
+      border-bottom-left-radius: 0;
+    }
+  }
+  .nav-link {
+    padding: 0.3rem 1rem;
+    color: #fff;
+  }
+}
+
+.list-group-item{
+  background: transparent;
+}
+
+.Mui{
+  &AppBar-colorPrimary{
+    background: $color-primary-blue !important;
+    
+  }
+  &Button{
+    &-textSecondary {
+      box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+      &:hover{
+        box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+      }
+    }
+  }
+  &Dialog-paperFullScreen {
+    padding-top: 100px;
+    padding-left: $space-default;
+    // background: rgba($color: $color-default-blue, $alpha: 0.25) !important;
+}
+  &Typography{
+    &-h2{
+      font-size: 2rem !important;
+    }
+  }
+  &Toolbar-root {
+    justify-content: space-between;
+    .MuiButton{
+      &-textSecondary {
+        color: $color-primary-light-blue;
+        background-color: rgba($color: $color-default-blue, $alpha: 0.21);
+        &:hover{
+          box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+        }
+      }
+    }
+    .MuiIconButton{
+      &-colorSecondary{
+        color: $color-primary-orange;
+        background-color: rgba($color: $color-default-blue, $alpha: 0.21);
+        &:hover{
+          box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+        }
+      }
+    }
+  }
+}
+
+
+.bets-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3 , 3fr);
+  grid-gap: calc(#{$space-default} / 2);
+}
