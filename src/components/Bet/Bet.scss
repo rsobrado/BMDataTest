@@ -1,0 +1,22 @@
+@import './../../scss/variables';
+
+.bets-container{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3 , 1fr);
+	grid-gap: calc(#{$space-default} );
+
+	min-height: calc(100vh - #{$space-default} * 2 - 100px);
+}
+.bet{
+	position: relative;
+
+	.nav {
+		display: grid;
+		grid-template-columns: repeat( 4, 1fr);
+		grid-gap: calc(#{$space-default} / 2);
+	}
+
+
+   
+}

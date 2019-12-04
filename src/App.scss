@@ -95,15 +95,29 @@ h6{
       }
     }
   }
-  &Dialog-paperFullScreen {
-    padding-top: 100px;
-    padding-left: $space-default;
-    // background: rgba($color: $color-default-blue, $alpha: 0.25) !important;
-}
+  &Paper-rounded{
+    border-radius: calc(#{$space-default} / 2) !important;
+  }
+  &Dialog{
+    &-root{
+      pointer-events: none;
+    }
+    &-paperFullScreen {
+      padding-top: 100px;
+      padding-left: $space-default;
+    }
+    &-container{
+      pointer-events: initial;
+    }
+  }
   &Typography{
     &-h2{
       font-size: 2rem !important;
     }
+  }
+  &Chip-root{
+    color: inherit !important;
+    border-color: inherit !important;
   }
   &Toolbar-root {
     justify-content: space-between;
@@ -128,10 +142,3 @@ h6{
   }
 }
 
-
-.bets-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3 , 3fr);
-  grid-gap: calc(#{$space-default} / 2);
-}

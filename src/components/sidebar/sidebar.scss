@@ -1,14 +1,7 @@
 
 @import './../../scss/variables';
 
-.sidebar{
-
-    // background: midnightblue;
-    // border-bottom-left-radius: 40px;
-    // border-top-left-radius: 40px;
-    // overflow: hidden;
-    // padding-left: calc(#{$space-default} / 2);
-    
+.sidebar{    
     @media screen and (min-width: 575px) {
         height: calc(100vh - 88px);
     }
