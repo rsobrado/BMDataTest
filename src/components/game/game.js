@@ -41,10 +41,10 @@ const Game = props => {
 		<div className="game">
 			<div className="game-info">
 				<div className="game-time">
-					<p>8:00pm</p>
+					<p>{Math.ceil(Math.random() * 10)}:00pm</p>
 				</div>
 				<div className="teams">
-					<p>{state.teamHome} vs {state.teamAway}</p>
+				<p>{state.league}{state.teamHome}</p><p>{state.teamAway}</p>
 				</div>
 			</div>
 			<div className="team-stats">
@@ -52,48 +52,48 @@ const Game = props => {
 				<Nav >
 					<NavItem>
 						<Badge  color="primary" overlap="circle" badgeContent={'-'} >
-							<Button color="secondary" onClick={handleClickOpen} >3½</Button>
+							<Button color="secondary" onClick={handleClickOpen} >{Math.ceil(Math.random() * 10)}½</Button>
 						</Badge> 
 					</NavItem>
 					<NavItem>
 						<Badge  color="primary" overlap="circle" badgeContent={'-'} >
-							<Button color="secondary" onClick={handleClickOpen} >3½</Button>
+							<Button color="secondary" onClick={handleClickOpen} >{Math.ceil(Math.random() * 10)}½</Button>
 						</Badge> 
 					</NavItem>
 					<NavItem>
 						<Badge  color="primary" overlap="circle" badgeContent={'-'} >
-							<Button color="secondary" onClick={handleClickOpen} >3½</Button>
+							<Button color="secondary" onClick={handleClickOpen} >{Math.ceil(Math.random() * 10)}½</Button>
 						</Badge> 
 					</NavItem>
 					<NavItem>
 						<Badge  color="primary" overlap="circle" badgeContent={'-'} >
-							<Button color="secondary" onClick={handleClickOpen} >3½</Button>
+							<Button color="secondary" onClick={handleClickOpen} >{Math.ceil(Math.random() * 10)}½</Button>
 						</Badge> 
 					</NavItem>
 					<NavItem>
 						<Badge  color="primary" overlap="circle" badgeContent={'-'} >
-							<Button color="secondary" onClick={handleClickOpen} >3½</Button>
+							<Button color="secondary" onClick={handleClickOpen} >{Math.ceil(Math.random() * 10)}½</Button>
 						</Badge> 
 					</NavItem>
 					<NavItem>
-						<Button color="secondary" onClick={handleClickOpen} >234</Button>
+						<Button color="secondary" onClick={handleClickOpen} >{Math.ceil(Math.random() * 100)}</Button>
 					</NavItem>
 					<NavItem>
 						<Badge  color="secondary" overlap="circle" badgeContent={'+'} >
-							<Button color="secondary" onClick={handleClickOpen} >O6½</Button>
+							<Button color="secondary" onClick={handleClickOpen} >{Math.ceil(Math.random() * 10)}½</Button>
 						</Badge> 
 					</NavItem>
 					<NavItem>
 						<Badge  color="primary" overlap="circle" badgeContent={'-'} >
-							<Button color="secondary" onClick={handleClickOpen} >3½</Button>
+							<Button color="secondary" onClick={handleClickOpen} >{Math.ceil(Math.random() * 10)}½</Button>
 						</Badge> 
 					</NavItem>
 					<NavItem>
-						<Button color="secondary" onClick={handleClickOpen} >234</Button>
+						<Button color="secondary" onClick={handleClickOpen} >{Math.ceil(Math.random() * 100)}</Button>
 					</NavItem>
 					<NavItem>
 						<Badge  color="secondary" overlap="circle" badgeContent={'+'} >
-							<Button color="secondary" onClick={handleClickOpen} >O6½</Button>
+							<Button color="secondary" onClick={handleClickOpen} >{Math.ceil(Math.random() * 10)}½</Button>
 						</Badge> 
 					</NavItem>
 				</Nav>
@@ -107,7 +107,7 @@ const Game = props => {
 					<AppBar >
 						<Toolbar>
 							<Button edge="start" color="secondary" onClick={handleClose} aria-label="close"><CloseIcon /></Button>
-							<Typography variant="h2" > <b>{state.teamHome}</b> vs <b>{state.teamAway}</b> <Chip size="small" elevation={4} label={state.sport} color="primary" className="MuiPaper-elevation4"/> <Chip size="small" variant="outlined" label={state.league} className="MuiPaper-elevation3"/> </Typography>
+								<Typography variant="h2" > <b>{state.league}{state.teamHome}</b> vs <b>{state.teamAway}</b> <Chip size="small" elevation={4} label={state.sport} color="primary" className="MuiPaper-elevation4"/> <Chip size="small" variant="outlined" label={state.league} className="MuiPaper-elevation3"/> </Typography>
 							<Button autoFocus color="secondary" onClick={handleClose}><SaveIcon />save</Button>
 						</Toolbar>
 					</AppBar>

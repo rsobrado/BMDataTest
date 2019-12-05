@@ -16,11 +16,11 @@ const GamesSumary = props => {
 	const {state, dispatch} = useContext(AppContext);
 
 	return (
-		<div className="panel">
-			<h1><Chip size="small"  elevation={4} label={state.sport}  className="MuiPaper-elevation4"/> <Chip size="small" variant="outlined" label={state.league} className="MuiPaper-elevation3"/> </h1>
+		<div className="panel MuiPaper-elevation22">
+			<h1 className="MuiPaper-elevation2"><Chip size="small"  elevation={4} label={state.sport}  className="MuiPaper-elevation4"/> <Chip size="small" variant="outlined" label={state.league} className="MuiPaper-elevation3"/> </h1>
 			<div className="game-container">
 				<Typography gutterBottom variant="h5" component="h5" className="card-tittle">12/12/2020 </Typography>
-				<Card elevation={20} className="card-content-container">
+				<Card elevation={18} className="card-content-container">
 					<CardContent className="card-content">
 						<ListGroup flush>
 							<ListGroupItem  >
