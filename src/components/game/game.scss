@@ -3,9 +3,14 @@
 .game {
     align-items: center;
     display: grid;
-    grid-template-columns: 3fr 4fr 1fr;
+    grid-template-columns: 1fr;
     text-align: center;
     position: relative;
+
+    @media screen and (min-width: 575px) {
+
+        grid-template-columns: 3fr 4fr 1fr;
+    }
     p{
         margin: 0;
     }

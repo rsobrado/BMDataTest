@@ -42,29 +42,36 @@
 		background-color: rgba($color: $color-default-blue, $alpha: 0.35);
 		box-shadow: inset -2px -3px 16px 4px rgba(255, 255, 255, .36), 2px 3px 6px rgba(0, 0, 0, 0.23);
 		border-top-left-radius: calc(#{$space-default} );
-    padding: calc(39.97px) calc(39.97px / 2) !important;
-    box-sizing: border-box;
-    width: calc(100% );
+		padding: calc(39.97px) calc(39.97px / 2) !important;
+		box-sizing: border-box;
+		width: calc(100% );
 		position: relative;
-		height: calc(100vh - #{$space-default});
+		height: calc(100vh);
+		overflow-y: scroll;
 		@media screen and (min-width: 575px) {
+			min-height: calc(100vh - #{$space-default});
 				padding: calc(#{$space-default} ) calc(#{$space-default} * 2);
 		}
 		.nav{
-				display: grid;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			margin: calc(#{$space-default} / 2) 0;
+			grid-gap: calc(#{$space-default} / 4);
+			@media screen and (min-width: 575px) {
+				margin: 0;
 				grid-template-columns: repeat(5, 1fr);
-				grid-gap: calc(#{$space-default} / 4);
-				button{
-						padding: 3px 1rem !important;
-						background: rgba($color: $color-primary-yellow, $alpha: 1);
-						color: rgba(4, 49, 85, 0.8);
-						border-radius: $space-default !important;
-						&:hover{
+			}
+			button{
+					padding: 3px 1rem !important;
+					background: rgba($color: $color-primary-yellow, $alpha: 1);
+					color: rgba(4, 49, 85, 0.8);
+					border-radius: $space-default !important;
+					&:hover{
 
-								background: rgba($color: $color-primary-yellow, $alpha: 0.75);
-						}
+							background: rgba($color: $color-primary-yellow, $alpha: 0.75);
+					}
 
-				}
+			}
 		}
 }
 
